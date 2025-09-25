@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {Recibos} from './recibos/pages/recibos/recibos';
-import {Empleados} from './empleados/pages/empleados/empleados';
 import {PageNotFound} from './pages/page-not-found/page-not-found';
+import {EmpleadosHome} from './empleados/pages/empleados-home/empleados-home';
+import {RecibosHome} from './recibos/pages/recibos-home/recibos-home';
 
 const routes: Routes = [
   {
     path: 'recibos',
-    component: Recibos,
+    component: RecibosHome,
   },
   {
     path: 'empleados',
-    component: Empleados,
+    component: EmpleadosHome,
   },
   {
     path: '',

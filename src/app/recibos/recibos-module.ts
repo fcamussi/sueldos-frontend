@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { RecibosRoutingModule } from './recibos-routing-module';
-import { Recibos } from './pages/recibos/recibos';
+import { RecibosHome } from './pages/recibos-home/recibos-home';
 
 
 @NgModule({
   declarations: [
-    Recibos
+    RecibosHome,
   ],
   imports: [
     CommonModule,
