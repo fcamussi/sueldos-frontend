@@ -1,0 +1,20 @@
+<nav class="navbar navbar-light bg-light p-3 sidebar-min sidebar-nav" role="navigation" aria-label="Sidebar">
+  <ul class="navbar-nav flex-column">
+    <li class="nav-item">
+      <a class="nav-link text-start"
+         routerLink="list"
+         routerLinkActive="active bg-primary text-white"
+         [routerLinkActiveOptions]="{ exact: false }">
+        Listado
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-start"
+         routerLink="add"
+         routerLinkActive="active bg-primary text-white"
+         [routerLinkActiveOptions]="{ exact: true }">
+        Agregar
+      </a>
+    </li>
+  </ul>
+</nav>

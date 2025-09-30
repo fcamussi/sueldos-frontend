@@ -1,1 +1,9 @@
-<p>empleado-list works!</p>
+<div class="row">
+  <div class="col-md-4 mb-3" *ngFor="let empleado of empleados">
+    <app-empleado-card
+      [empleado]="empleado"
+      (editar)="onEditar($event)"
+      (eliminar)="onEliminar($event)">
+    </app-empleado-card>
+  </div>
+</div>

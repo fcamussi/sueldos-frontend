@@ -6,6 +6,8 @@ import { EmpleadosHome } from './pages/empleados-home/empleados-home';
 import { EmpleadoCard } from './components/empleado-card/empleado-card';
 import { EmpleadoForm } from './components/empleado-form/empleado-form';
 import { EmpleadoList } from './components/empleado-list/empleado-list';
+import { Sidebar } from './components/sidebar/sidebar';
+import { EmpleadoAdd } from './components/empleado-add/empleado-add';
 
 
 @NgModule({
@@ -14,6 +16,8 @@ import { EmpleadoList } from './components/empleado-list/empleado-list';
     EmpleadoCard,
     EmpleadoForm,
     EmpleadoList,
+    Sidebar,
+    EmpleadoAdd,
   ],
   imports: [
     CommonModule,

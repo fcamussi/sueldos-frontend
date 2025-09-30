@@ -8,7 +8,9 @@ import {Empleado} from '../../../models/empleado';
   styleUrl: './empleado-card.css'
 })
 export class EmpleadoCard {
+
   @Input() empleado!: Empleado;
   @Output() editar = new EventEmitter<Empleado>();
   @Output() eliminar = new EventEmitter<Empleado>();
+
 }

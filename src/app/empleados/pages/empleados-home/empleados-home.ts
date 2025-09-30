@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-empleados-home',
@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
   styleUrl: './empleados-home.css'
 })
 export class EmpleadosHome {
-
 }
