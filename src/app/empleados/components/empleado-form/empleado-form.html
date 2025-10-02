@@ -1,1 +1,34 @@
-<p>empleado-form works!</p>
+<div class="card">
+  <div class="card-body">
+    <form [formGroup]="formEmpleado" (ngSubmit)="onSubmit()">
+      <div class="mb-2">
+        <label for="nombre" class="form-label">Nombre:</label>
+        <input id="nombre" type="text" class="form-control" formControlName="nombre" placeholder="Nombre">
+        <small class="text-danger" *ngIf="nombre.invalid && nombre.touched">
+          Nombre obligatorio
+        </small>
+      </div>
+      <div class="mb-2">
+        <label for="apellido" class="form-label">Apellido:</label>
+        <input id="apellido" type="text" class="form-control" formControlName="apellido" placeholder="Apellido">
+        <small class="text-danger" *ngIf="apellido.invalid && apellido.touched">
+          Apellido obligatorio
+        </small>
+      </div>
+      <div class="mb-2">
+        <label for="precioHora" class="form-label">Precio/Hora:</label>
+        <input id="precioHora" type="number" class="form-control" formControlName="precioHora"
+               placeholder="Precio/Hora">
+        <small class="text-danger" *ngIf="precioHora.errors?.['required'] && precioHora.touched">
+          Precio/Hora obligatorio
+        </small>
+        <small class="text-danger" *ngIf="precioHora.errors?.['min'] && precioHora.touched">
+          El precio debe ser mayor a 0
+        </small>
+      </div>
+      <button class="btn btn-primary mt-4" [disabled]="formEmpleado.invalid">
+        Guardar
+      </button>
+    </form>
+  </div>
+</div>

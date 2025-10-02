@@ -2,8 +2,8 @@
   <div class="col-md-4 mb-3" *ngFor="let empleado of empleados">
     <app-empleado-card
       [empleado]="empleado"
-      (editar)="onEditar($event)"
-      (eliminar)="onEliminar($event)">
+      (editar)="onEditar(empleado.id)"
+      (eliminar)="onEliminar(empleado.id)">
     </app-empleado-card>
   </div>
 </div>

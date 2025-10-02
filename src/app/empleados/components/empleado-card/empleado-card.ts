@@ -10,7 +10,7 @@ import {Empleado} from '../../../models/empleado';
 export class EmpleadoCard {
 
   @Input() empleado!: Empleado;
-  @Output() editar = new EventEmitter<Empleado>();
-  @Output() eliminar = new EventEmitter<Empleado>();
+  @Output() editar = new EventEmitter<number>();
+  @Output() eliminar = new EventEmitter<number>();
 
 }

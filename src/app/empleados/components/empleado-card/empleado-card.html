@@ -5,10 +5,10 @@
       <p class="card-text mb-0 text-muted">{{ empleado.apellido }}</p>
     </div>
     <div>
-      <button class="btn btn-sm btn-primary me-2" (click)="editar.emit(empleado)">
+      <button class="btn btn-sm btn-primary me-2" (click)="editar.emit(empleado.id)">
         Editar
       </button>
-      <button class="btn btn-sm btn-danger" (click)="eliminar.emit(empleado)">
+      <button class="btn btn-sm btn-danger" (click)="eliminar.emit(empleado.id)">
         Eliminar
       </button>
     </div>

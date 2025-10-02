@@ -8,6 +8,8 @@ import { EmpleadoForm } from './components/empleado-form/empleado-form';
 import { EmpleadoList } from './components/empleado-list/empleado-list';
 import { Sidebar } from './components/sidebar/sidebar';
 import { EmpleadoAdd } from './components/empleado-add/empleado-add';
+import {ReactiveFormsModule} from '@angular/forms';
+import { EmpleadoUpdate } from './components/empleado-edit/empleado-edit';
 
 
 @NgModule({
@@ -18,10 +20,12 @@ import { EmpleadoAdd } from './components/empleado-add/empleado-add';
     EmpleadoList,
     Sidebar,
     EmpleadoAdd,
+    EmpleadoUpdate,
   ],
   imports: [
     CommonModule,
-    EmpleadosRoutingModule
+    EmpleadosRoutingModule,
+    ReactiveFormsModule,
   ]
 })
 export class EmpleadosModule { }

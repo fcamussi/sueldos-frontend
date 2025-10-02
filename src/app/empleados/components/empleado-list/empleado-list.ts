@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Empleado} from '../../../models/empleado';
 import {EmpleadoServiceMock} from '../../../services/empleado-service-mock';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-empleado-list',
@@ -12,21 +13,22 @@ export class EmpleadoList implements OnInit {
 
   empleados: Empleado[] = [];
 
-  constructor(private empleadoServiceMock: EmpleadoServiceMock) {
+  constructor(private empleadoServiceMock: EmpleadoServiceMock,
+              private router: Router) {
   }
 
   ngOnInit() {
-    this.empleadoServiceMock.listar().subscribe((empleados) => {
+    this.empleadoServiceMock.getAll().subscribe(empleados => {
       this.empleados = empleados;
     });
   }
 
-  onEditar(emp: Empleado) {
-    console.log('Editar empleado:', emp);
+  onEditar(id: number) {
+    void this.router.navigate(['/empleados/edit', id]);
   }
 
-  onEliminar(emp: Empleado) {
-    console.log('Eliminar empleado:', emp);
+  onEliminar(id: number) {
+    console.log('Eliminar empleado:', id);
   }
 
 }
