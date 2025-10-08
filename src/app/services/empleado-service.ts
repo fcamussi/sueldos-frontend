@@ -12,8 +12,12 @@ export class EmpleadoService {
 
   constructor(private http: HttpClient) { }
 
-  listar(): Observable<Empleado[]> {
+  getAll(): Observable<Empleado[]> {
     return this.http.get<Empleado[]>(this.apiUrl);
+  }
+
+  getById(id: number): Observable<Empleado> {
+    return this.http.get<Empleado>(`${this.apiUrl}/${id}`);
   }
 
 }

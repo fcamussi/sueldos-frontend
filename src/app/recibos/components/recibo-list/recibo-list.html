@@ -1,1 +1,22 @@
-<p>recibo-list works!</p>
+<div class="table-responsive mt-3">
+  <table class="table table-striped align-middle">
+    <thead class="table-light">
+    <tr>
+      <th scope="col" class="text-center">#</th>
+      <th scope="col" class="text-center">Periodo</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col" class="text-end">Monto Total</th>
+      <th scope="col" class="text-center">Acciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let recibo of recibos"
+        app-recibo-row
+        [recibo]="recibo"
+        (editar)="onEditar(recibo.id)"
+        (eliminar)="onEliminar(recibo.id)">
+    </tr>
+    </tbody>
+  </table>
+</div>

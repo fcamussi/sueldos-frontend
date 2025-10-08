@@ -1,0 +1,17 @@
+<th scope="row" class="text-center">{{ recibo.id }}</th>
+<td class="text-center">
+  {{ recibo.jornadas[0].fecha }} — {{ recibo.jornadas[recibo.jornadas.length - 1].fecha }}
+</td>
+<td>{{ recibo.empleado.nombre }}</td>
+<td>{{ recibo.empleado.apellido }}</td>
+<td class="text-end">
+  {{ calcularMontoTotal() | number:'1.2-2' }}
+</td>
+<td class="text-center">
+  <button class="btn btn-sm btn-outline-primary me-1" (click)="editar.emit(recibo.id)">
+    Editar
+  </button>
+  <button class="btn btn-sm btn-outline-danger" (click)="eliminar.emit(recibo.id)">
+    Eliminar
+  </button>
+</td>
