@@ -9,7 +9,7 @@ import { EmpleadoList } from './components/empleado-list/empleado-list';
 import { Sidebar } from './components/sidebar/sidebar';
 import { EmpleadoAdd } from './components/empleado-add/empleado-add';
 import {ReactiveFormsModule} from '@angular/forms';
-import { EmpleadoUpdate } from './components/empleado-edit/empleado-edit';
+import { EmpleadoEdit } from './components/empleado-edit/empleado-edit';
 
 
 @NgModule({
@@ -20,7 +20,7 @@ import { EmpleadoUpdate } from './components/empleado-edit/empleado-edit';
     EmpleadoList,
     Sidebar,
     EmpleadoAdd,
-    EmpleadoUpdate,
+    EmpleadoEdit,
   ],
   imports: [
     CommonModule,

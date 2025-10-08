@@ -9,7 +9,7 @@ import {Empleado} from '../../../models/empleado';
   templateUrl: './empleado-edit.html',
   styleUrl: './empleado-edit.css'
 })
-export class EmpleadoUpdate implements OnInit {
+export class EmpleadoEdit implements OnInit {
 
   @Input() id!: number;
   empleado!: Empleado;

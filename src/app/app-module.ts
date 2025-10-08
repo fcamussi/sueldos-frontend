@@ -6,6 +6,7 @@ import { App } from './app';
 import { Navbar } from './navbar/navbar';
 import { PageNotFound } from './pages/page-not-found/page-not-found';
 import {EmpleadosModule} from './empleados/empleados-module';
+import {RecibosModule} from './recibos/recibos-module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {EmpleadosModule} from './empleados/empleados-module';
   imports: [
     BrowserModule,
     EmpleadosModule,
+    RecibosModule,
     AppRoutingModule, /* conviene dejarlo último */
   ],
   providers: [
